@@ -28,4 +28,9 @@ public class PersonDAO {
         if (id > PEOPLE_COUNT || id < 0) return null;
         else return people.get(id);
     }
+
+    public void save(Person person) {
+        person.setId(PEOPLE_COUNT++);
+        people.add(person);
+    }
 }
